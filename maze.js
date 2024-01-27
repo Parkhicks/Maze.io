@@ -20,9 +20,22 @@ function movedown(x,y,maze)
     else{}
 }
 function moveleft(x,y,maze)
-{}
+{
+    list = maze[y]
+    if (list(x-2)="S")
+    {
+        x=x-1
+    }
+    else{}
+}
 function moveright(x,y,maze)
-{}
+{list = maze[y]
+    if (list(x)="S")
+    {
+        x=x+1
+    }
+    else{}}
+    
 function checkfinish(x,y,ex,ey)
 {
     if (x == ex & y==ey)
