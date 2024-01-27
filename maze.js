@@ -1,13 +1,27 @@
 let finish = 0
-function moveup(y,maze)
-{
+document.onkeydown = checkKey;
 
+function moveup(x,y,maze)
+{
+    list = maze[y+1]
+    if (list(x-1)="S")
+    {
+        y=y+1
+    }
+    else{}
 }
-function movedown(y,maze)
+function movedown(x,y,maze)
+{
+    list = maze[y-1]
+    if (list(x-1)="S")
+    {
+        y=y-1
+    }
+    else{}
+}
+function moveleft(x,y,maze)
 {}
-function moveleft(x,maze)
-{}
-function moveright(x,maze)
+function moveright(x,y,maze)
 {}
 function checkfinish(x,y,ex,ey)
 {
@@ -44,13 +58,30 @@ function maze1()
     let row24 = ("w","w","w","w","w","w","w","w","w","w","w","w","S","w","w","w","S","w","w","w","w","w","w","w","w")
     let row25 = ("w","w","w","w","w","w","w","w","w","w","w","w","S","S","S","S","S","S","S","w","w","w","w","w","w")
 
-    let maze = [row1,row2,row3,row4,row5,row6,row6,row7,row8,row9,row10,row11,row12,row13,row14,row15,row16,row17,row18,row19,row20]
-    let beg_x = 5
-    let beg_y = 1
+    let maze = [row1,row2,row3,row4,row5,row6,row6,row7,row8,row9,row10,row11,row12,row13,row14,row15,row16,row17,row18,row19,row20,row21,row22,row23,row24,row25]
+    let x = 5
+    let y = 1
     let end_x = 16
     let end_y = 20
     while (finish = 0)
     {
+        function checkKey(e) {
+
+            e = e || window.event;
         
+            if (e.keyCode == '38') {
+                moveup(x,y,maze)
+            }
+            else if (e.keyCode == '40') {
+                movedown(y,maze)
+            }
+            else if (e.keyCode == '37') {
+               moveleft(x,maze)
+            }
+            else if (e.keyCode == '39') {
+               moveright(x,maze)
+            }
+        
+        } 
     }
 }
