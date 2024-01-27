@@ -29,9 +29,9 @@ let maze1 = [row25,row24,row23,row22,row21,row20,row19,row18,row17,row16,row15,r
 console.log(maze1[0][0])
 
 let x = 0
-let y = 0
-let endx = 24
-let endy = 24
+let y = 4
+let endx = 22
+let endy = 0
 
 document.addEventListener("DOMContentLoaded", function () {
     const player = document.getElementById("player");
