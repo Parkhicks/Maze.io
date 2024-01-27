@@ -1,4 +1,4 @@
-let row1 =["0","0","1","1"]
+let row1 =["0","0","1","2"]
 let row2 =["0","1","1","0"]
 let row3 =["1","1","0","0"]
 let row4 =["1","0","0","0"]
@@ -7,6 +7,8 @@ console.log(maze1[0][0])
 
 let x = 0
 let y = 0
+let endx = 3
+let endy = 3
 
 document.addEventListener("DOMContentLoaded", function () {
     const player = document.getElementById("player");
@@ -14,13 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let playerX = 200; // Initial X position
     let playerY = 150; // Initial Y position
-
+    if (maze1[x][y] ==2)
+    {
+        console.log("You made it")
+    }
     function updatePlayerPosition() {
         player.style.left = playerX + "px";
         player.style.top = playerY + "px";
     }
 
-    function handleKeyPress(event) {
+        function handleKeyPress(event) {
         const speed = 10; // Adjust the speed as needed
         let nextlist 
         switch (event.key) {
