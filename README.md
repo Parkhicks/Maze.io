@@ -6,7 +6,7 @@ I know this is probably the most horrribly inneficient maze game ever and it bar
 
 You can run this game by going into the MAZE GAME folder and getting into the index.html file and launching the live server, the HTML, CSS, and JS are all linked together and your game should start. Use the arrow keys to move the player.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Loom Video Walkthrough](https://www.loom.com/share/b44ee505224d49819ebfec2808c69602)
 
 
 # Development Environment
