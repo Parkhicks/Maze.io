@@ -24,6 +24,7 @@ h1 {
     justify-content:center;
     font-size:350%;
 }
+/*this is the maze background css*/
 #map-container {
     grid-column-start:2;
     grid-column-end:2;
@@ -35,6 +36,7 @@ h1 {
     grid-template-columns: repeat(25, 1fr); /* 25 equal columns */
     grid-template-rows: repeat(25, 1fr);  
 }
+/*this is all the grids in the maze css*/
 .grid1a{
     background-image: url(/Images/walls.jpg);
     background-size: cover;
@@ -3800,7 +3802,7 @@ h1 {
 }
 
 
-
+/*this is the player css*/
 #player {
     height: 26.6836px;
     width: 43.6836px;

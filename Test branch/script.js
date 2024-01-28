@@ -1,4 +1,4 @@
-
+//different lists with either 0 for wall, 1 for space, and 2 for end.
 let row1 =["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]
 let row2 =["0","1","1","1","1","1","1","1","1","1","1","1","1","1","0","1","0","1","0","1","0","1","0","1","0"]
 let row3 =["0","1","0","0","0","1","0","1","0","1","0","1","0","1","0","1","0","1","0","1","0","1","0","1","0"]
@@ -25,6 +25,7 @@ let row23 =["0","1","0","1","0","0","0","0","0","0","0","0","0","0","0","0","0",
 let row24 =["0","1","0","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","0"]
 let row25 =["0","0","0","1","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]
 
+//creating an array for all the rows to be stored.
 let maze1 = [row25,row24,row23,row22,row21,row20,row19,row18,row17,row16,row15,row14,row13,row12,row11,row10,row9,row8,row7,row6,row5,row4,row3,row2,row1]
 console.log(maze1[0][0])
 
@@ -43,13 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
     {
         console.log("You made it")
     }
+    //function to update player position
     function updatePlayerPosition() {
         player.style.left = playerX + "px";
         player.style.top = playerY + "px";
     }
-
+        // Function to find which key is pressed, compare it to surrounding maze elements, and move the player.
         function handleKeyPress(event) {
-        const xspeed = 65; // Adjust the speed as needed
+        const xspeed = 65; 
         const yspeed = 26.6836
         switch (event.key) {
             case "ArrowUp":
