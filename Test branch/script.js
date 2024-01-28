@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const player = document.getElementById("player");
     const mapContainer = document.getElementById("map-container");
 
-    let playerX = 200; // Initial X position
-    let playerY = 150; // Initial Y position
+    let playerX = 385; // Initial X position
+    let playerY = 830; // Initial Y position
     if (maze1[x][y] ==2)
     {
         console.log("You made it")
@@ -49,42 +49,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
         function handleKeyPress(event) {
-        const speed = 10; // Adjust the speed as needed
+        const xspeed = 65; // Adjust the speed as needed
+        const yspeed = 26.6836
         switch (event.key) {
             case "ArrowUp":
                 console.log(maze1[x+1][y])
-                if(maze1[x+1][y]=="1")
+                if(maze1[x+1][y]=="1" || maze1[x+1][y]=="2")
                     {console.log("up")
                     x = x+1
-                    playerY -= speed;}
+                    playerY -= yspeed;}
                 else
                     {console.log("wall")}
                 break;
             case "ArrowDown":
                 console.log(maze1[x-1][y])
-                if(maze1[x-1][y]=="1")
+                if(maze1[x-1][y]=="1"|| maze1[x+1][y]=="2")
                     {console.log("down")
                     x = x-1
-                    playerY += speed;}
+                    playerY += yspeed;}
                 else
                     {console.log("wall")}
                 break;
             case "ArrowLeft":
                 console.log(maze1[x][y-1])
-                if(maze1[x][y-1]=="1")
+                if(maze1[x][y-1]=="1"|| maze1[x+1][y]=="2")
                     {console.log("left")
                     y = y-1
-                    playerX -= speed;}
+                    playerX -= xspeed;}
                 else
                     {console.log("wall")}
                 break;
             case "ArrowRight":
                 
                 console.log(maze1[x][y+1])
-                if(maze1[x][y+1]=="1")
+                if(maze1[x][y+1]=="1"|| maze1[x+1][y]=="2")
                     {console.log("right")
                     y = y+1
-                    playerX += speed;}
+                    playerX += xspeed;}
                 else
                     {console.log("wall")}
                 break;
